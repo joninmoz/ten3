@@ -1,3 +1,7 @@
+import { defineCustomElements } from '@ionic/pwa-elements/loader';
+
+// Call the element loader after the platform has been bootstrapped
+defineCustomElements(window);
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
@@ -24,7 +28,12 @@ import '@ionic/vue/css/display.css';
 import './theme/variables.css';
 
 const app = createApp(App)
-  .use(IonicVue)
+  .use(IonicVue, {
+    build: {
+      assetsPublicPath: '/',
+      assetsSubDirectory: 'static'
+    }
+  })
   .use(router);
   
 router.isReady().then(() => {

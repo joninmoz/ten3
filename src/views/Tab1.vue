@@ -2,27 +2,36 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 1</ion-title>
+        <ion-title>Files</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-      </ion-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <img src="../../static/cat.jpg"><br>
+            This is a cat 
+          </ion-col>
+          <ion-col>
+            <img src="../../static/family.jpg"><br>
+            This is a family
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
     
-      <ExploreContainer name="Tab 1 page" />
+      
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
-import ExploreContainer from '@/components/ExploreContainer.vue';
 
 export default  {
   name: 'Tab1',
-  components: { ExploreContainer, IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
 }
+
+
 </script>
