@@ -10,11 +10,11 @@
         <ion-row>
           <ion-col size="6">
             <img src="../../static/cat.jpg"><br>
-            This is a cat 
+            <h3>This is a cat</h3> 
           </ion-col>
           <ion-col>
             <img src="../../static/family.jpg"><br>
-            This is a family
+            <h3>This is a family</h3>
           </ion-col>
         </ion-row>
       </ion-grid>
